@@ -1,45 +1,92 @@
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: 'Lexend Deca', sans-serif;
+}
+h1 {
+  color: hsl(0, 0%, 95%);
+  font-family: 'Big Shoulders Display', cursive;
+}
+body {
+  background-color: hsl(0, 0%, 95%);
+  margin: 0;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: hsl(0, 0%, 95%);
+  font-family: 'Lexend Deca', sans-serif;
+  border-radius: 8px;
+  height: 40px;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+button:hover {
+  background-color: hsl(0, 0%, 80%);
+  color: hsl(0, 0%, 20%);
+}
+.first-block {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.second-block {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.third-block {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.first-block button {
+  color: hsl(31, 77%, 52%);
+}
+.second-block button {
+  color: hsl(184, 100%, 22%);
+}
+.third-bloc button {
+  color: hsl(179, 100%, 13%);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  display: flex;
+  
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+  display: flex;
 }
-
-body {
-  width: 50%;
-  height: 100vh;
-  margin: 0;
-}
-
 .container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 10% auto;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 10%;
 }
 
 .first-block,
 .second-block,
 .third-block {
-  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
 }
-
-@media only screen and (min-width: 374px) {
-  body {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    
-  }
+@media only screen and (max-width: 699px) {
   .container {
-    display: flex;
     flex-direction: column;
   }
+
   .first-block,
   .second-block,
   .third-block {
@@ -47,17 +94,15 @@ body {
   }
 }
 
-.first-block {
-  background-color: hsl(31, 77%, 52%);
-  z-index: 3;
-}
+@media only screen and (min-width: 700px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-.second-block {
-  background-color: hsl(184, 100%, 22%);
-  z-index: 2;
-}
-
-.third-block {
-  background-color: hsl(179, 100%, 13%);
-  z-index: 1;
+  .first-block,
+  .second-block,
+  .third-block {
+    flex-basis: 30%;
+  }
 }
