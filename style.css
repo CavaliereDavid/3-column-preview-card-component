@@ -1,15 +1,20 @@
 p {
   color: hsla(0, 0%, 100%, 0.75);
   font-family: 'Lexend Deca', sans-serif;
+  min-width: 100px;
+  max-width: 100px;
 }
+
 h1 {
   color: hsl(0, 0%, 95%);
   font-family: 'Big Shoulders Display', cursive;
 }
+
 body {
   background-color: hsl(0, 0%, 95%);
-  margin: 0;
+  margin: 25%;
 }
+
 button {
   display: flex;
   justify-content: center;
@@ -20,13 +25,13 @@ button {
   border-radius: 8px;
   height: 40px;
   max-width: 300px;
-  margin: 0 auto;
-  margin-top: 20px;
 }
+
 button:hover {
   background-color: hsl(0, 0%, 80%);
   color: hsl(0, 0%, 20%);
 }
+
 .first-block {
   background-color: hsl(31, 77%, 52%);
 }
@@ -42,35 +47,29 @@ button:hover {
 .first-block button {
   color: hsl(31, 77%, 52%);
 }
+
 .second-block button {
   color: hsl(184, 100%, 22%);
 }
-.third-bloc button {
+
+.third-block button {
   color: hsl(179, 100%, 13%);
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
-  display: flex;
-  
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-  display: flex;
 }
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: auto;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  bottom: 50%;
-  left: 10%;
 }
 
 .first-block,
@@ -81,7 +80,9 @@ button:hover {
   align-items: center;
   text-align: center;
   padding: 30px;
+
 }
+
 @media only screen and (max-width: 699px) {
   .container {
     flex-direction: column;
